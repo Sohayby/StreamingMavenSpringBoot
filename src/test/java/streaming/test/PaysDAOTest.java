@@ -17,6 +17,7 @@ import org.springframework.transaction.annotation.Transactional;
 import streaming.service.PaysDAO;
 import streaming.entity.Film;
 import streaming.entity.Pays;
+import streaming.service.PaysServiceCRUD;
 
 /**
  *
@@ -28,12 +29,12 @@ import streaming.entity.Pays;
 public class PaysDAOTest {
    
     @Autowired
-    private PaysDAO dAO;
+    private PaysServiceCRUD crud;
     @Test
     public void test(){
         Pays p = new Pays();
         p.setNom("FRANCE");
-        dAO.ajouter(p);
+        crud.save(p);
         
     }
 }

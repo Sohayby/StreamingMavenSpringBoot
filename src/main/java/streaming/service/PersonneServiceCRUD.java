@@ -5,10 +5,17 @@
  */
 package streaming.service;
 
+import java.io.Serializable;
+import org.springframework.data.repository.CrudRepository;
+import streaming.entity.Personne;
+
 /**
  *
  * @author admin
  */
-public interface PersonneServiceCRUD {
+public interface PersonneServiceCRUD extends CrudRepository<Personne, Long>{
     
+    public Personne findOneByPrenomAndNom (String p , String n);
+
+//    public void save(Personne p, Personne p1);
 }

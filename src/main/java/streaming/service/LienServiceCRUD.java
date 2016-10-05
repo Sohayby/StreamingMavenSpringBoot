@@ -6,8 +6,11 @@
 package streaming.service;
 
 import java.io.Serializable;
+import java.util.List;
 import org.springframework.data.repository.CrudRepository;
 import streaming.entity.Lien;
+import streaming.entity.Saison;
+import streaming.entity.Serie;
 
 /**
  *
@@ -15,4 +18,8 @@ import streaming.entity.Lien;
  */
 public interface LienServiceCRUD extends CrudRepository<Lien, Long>{
     
+    public List<Lien> findAllByFilmTitre (String titre);
+    public List<Lien> findAllByEpisodeNumEpisodeAndEpisodeSaisonNumSaisonAndEpisodeSaisonSerieTitre(int num, int numsaison, string titreserie);
+       
 }
+

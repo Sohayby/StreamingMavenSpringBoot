@@ -5,16 +5,10 @@
  */
 package streaming.service;
 
-import java.io.Serializable;
-import java.util.List;
-import org.springframework.data.repository.CrudRepository;
-import streaming.entity.Serie;
-
 /**
  *
  * @author admin
  */
-public interface SerieServiceCRUD extends CrudRepository<Serie, Long>{
-    
+class Personne {
     
 }
