@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package streaming.dao;
+package streaming.service;
 
 import java.util.List;
 import javax.persistence.EntityManager;
@@ -21,17 +21,8 @@ import streaming.entity.Personne;
 @Repository
 public class PersonneDAO {
     
-    @PersistenceContext
-    private EntityManager em;
-    
-    @Transactional
-    public void  ajouter (Personne p){
-        em.persist(p);
-    }
-    public List<Personne> lister(){
-        return  em.createQuery("SELECT p FROM Personne p ORDER BY p.nom , p.prenom" ).getResultList();
-        
+   
         
     }
     
-}
+
